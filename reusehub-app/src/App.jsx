@@ -54,29 +54,47 @@ function App() {
   const [successMessage, setSuccessMessage] = useState('')
   const [certificate, setCertificate] = useState(null)
 
-  const handleImageChange = (event) => {
-    const file = event.target.files[0]
+ 
+const handleImageChange = (event) => {
+  const file = event.target.files[0]
 
-    if (!file) {
-      setImagePreview('')
-      return
-    }
-
-    if (!file.type.startsWith('image/')) {
-      alert('Please select a valid image file.')
-      event.target.value = ''
-      setImagePreview('')
-      return
-    }
-
-    if (imagePreview) {
-      URL.revokeObjectURL(imagePreview)
-    }
-
-    const imageUrl = URL.createObjectURL(file)
-    setImagePreview(imageUrl)
-    setSuccessMessage('')
+  if (!file) {
+    setImagePreview('')
+    return
   }
+
+  // Check whether the selected file is an image
+  if (!file.type.startsWith('image/')) {
+    alert('Please select a valid image file.')
+    event.target.value = ''
+    setImagePreview('')
+    return
+  }
+
+  // Check image size (maximum 5 MB)
+  const maxSize = 5 * 1024 * 1024
+
+  if (file.size > maxSize) {
+    alert('Image size should not exceed 5 MB.')
+    event.target.value = ''
+    setImagePreview('')
+    return
+  }
+
+  // Remove previous preview URL
+  if (imagePreview) {
+    URL.revokeObjectURL(imagePreview)
+  }
+
+  // Create image preview
+  const imageUrl = URL.createObjectURL(file)
+
+  setImagePreview(imageUrl)
+  setSuccessMessage('')
+}
+
+
+   
 
   const handleSubmit = (event) => {
     event.preventDefault()

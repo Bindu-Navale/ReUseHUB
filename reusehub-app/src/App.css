@@ -1,12 +1,18 @@
 
-/* Main application */
+/* ==============================
+   MAIN APPLICATION
+============================== */
+
 .app {
   min-height: 100vh;
   color: #263d2e;
   background: #f8faf6;
 }
 
-/* Navigation bar */
+/* ==============================
+   NAVIGATION BAR
+============================== */
+
 .navbar {
   display: flex;
   align-items: center;
@@ -40,7 +46,10 @@
   color: #287448;
 }
 
-/* Hero section */
+/* ==============================
+   HERO SECTION
+============================== */
+
 .hero {
   padding: 70px 24px;
   text-align: center;
@@ -101,7 +110,10 @@
   border: 1px solid #cbdacb;
 }
 
-/* Browse section */
+/* ==============================
+   BROWSE SECTION
+============================== */
+
 .categories {
   padding: 55px 7%;
   background: #ffffff;
@@ -120,6 +132,7 @@
 }
 
 /* Search input */
+
 .categories input[type="search"] {
   display: block;
   box-sizing: border-box;
@@ -139,6 +152,7 @@
 }
 
 /* Category filters */
+
 .filter-buttons {
   display: flex;
   justify-content: center;
@@ -167,13 +181,15 @@
 }
 
 /* Result count */
+
 .result-count {
   margin: 22px 0;
   color: #69766d;
   font-size: 14px;
 }
 
-/* Item cards grid */
+/* Item cards */
+
 .item-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -183,7 +199,6 @@
   text-align: left;
 }
 
-/* Individual item card */
 .item-card {
   min-width: 0;
   padding: 20px;
@@ -209,7 +224,8 @@
   font-size: 14px;
 }
 
-/* Image area: photo or camera placeholder */
+/* Item images */
+
 .item-image-placeholder {
   display: grid;
   place-items: center;
@@ -233,7 +249,8 @@
   font-size: 42px;
 }
 
-/* Availability label */
+/* Availability */
+
 .available {
   display: inline-block;
   margin-top: 10px;
@@ -241,13 +258,17 @@
   font-size: 13px;
 }
 
-/* Empty search results */
+/* Empty results */
+
 .empty-message {
   padding: 30px;
   color: #69766d;
 }
 
-/* Footer */
+/* ==============================
+   FOOTER
+============================== */
+
 footer {
   padding: 35px 20px;
   background: #edf4e9;
@@ -265,42 +286,12 @@ footer p {
   font-size: 13px;
 }
 
-/* Tablet layout */
-@media (max-width: 700px) {
-  .navbar {
-    flex-direction: column;
-  }
+/* ==============================
+   UPLOAD SECTION
+============================== */
 
-  .nav-links {
-    justify-content: center;
-    gap: 16px;
-  }
-
-  .hero {
-    padding: 45px 20px;
-  }
-
-  .categories {
-    padding: 40px 20px;
-  }
-
-  .item-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-/* Mobile layout */
-@media (max-width: 460px) {
-  .item-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-  }
-}
 .upload-section {
-  padding: 50px 24px;
+  padding: 70px 24px;
   text-align: center;
   background: #edf4e9;
 }
@@ -315,12 +306,6 @@ footer p {
 .upload-section > p:not(.tagline) {
   color: #354b3b;
   font-size: 16px;
-}
-
-/* ReUseHUB - Item Upload Form */
-.upload-section {
-  padding: 70px 24px;
-  text-align: center;
 }
 
 .upload-placeholder {
@@ -393,7 +378,10 @@ footer p {
   background: #254f38;
 }
 
-/* Item photo preview */
+/* ==============================
+   IMAGE PREVIEW
+============================== */
+
 .image-preview {
   margin-top: 16px;
   padding: 16px;
@@ -427,7 +415,10 @@ footer p {
   cursor: pointer;
 }
 
-/* ReUseHUB Appreciation Certificate */
+/* ==============================
+   APPRECIATION CERTIFICATE
+============================== */
+
 .certificate-section {
   padding: 50px 24px;
   background: #f4f8f1;
@@ -484,22 +475,8 @@ footer p {
   color: #477951;
 }
 
-@media (max-width: 600px) {
-  .appreciation-certificate {
-    padding: 35px 24px;
-    outline-offset: -12px;
-  }
+/* Print button */
 
-  .appreciation-certificate h2 {
-    font-size: 25px;
-  }
-
-  .appreciation-certificate h3 {
-    font-size: 24px;
-  }
-}
-
-/* Certificate print button */
 .print-certificate-btn {
   margin-top: 25px;
   padding: 12px 24px;
@@ -516,36 +493,113 @@ footer p {
   background: #254f38;
 }
 
-/* Print only the appreciation certificate */
-@media print {
-  body * {
-    visibility: hidden;
+/* ==============================
+   TABLET RESPONSIVENESS
+============================== */
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
   }
 
-  .certificate-section,
-  .certificate-section * {
-    visibility: visible;
+  .nav-links {
+    justify-content: center;
+    gap: 16px;
   }
 
-  .certificate-section {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    padding: 20px 0;
-    background: white;
+  .hero {
+    padding: 45px 20px;
   }
 
+  .categories {
+    padding: 40px 20px;
+  }
+
+  .item-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* ==============================
+   MOBILE RESPONSIVENESS
+============================== */
+
+@media (max-width: 460px) {
+  .item-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 600px) {
   .appreciation-certificate {
-    max-width: none;
-    width: 90%;
-    margin: 0 auto;
-    box-shadow: none;
+    padding: 35px 24px;
+    outline-offset: -12px;
+  }
+
+  .appreciation-certificate h2 {
+    font-size: 25px;
+  }
+
+  .appreciation-certificate h3 {
+    font-size: 24px;
+  }
+}
+
+/* ==============================
+   CERTIFICATE PRINT SETTINGS
+============================== */
+
+@page {
+  size: A4 portrait;
+  margin: 12mm;
+}
+
+@media print {
+
+  html,
+  body,
+  #root {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important;
+  }
+
+  /* Hide everything except the certificate */
+  .app > *:not(.certificate-section) {
+    display: none !important;
+  }
+
+  /* Certificate section */
+  .certificate-section {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Certificate design */
+  .appreciation-certificate {
+    box-sizing: border-box;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
   }
 
+  /* Hide print button */
   .print-certificate-btn {
-    display: none;
+    display: none !important;
   }
 }
