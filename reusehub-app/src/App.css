@@ -863,3 +863,127 @@ footer p {
   .print-certificate-btn { display: none !important; }
 }
 
+
+
+/* Authentication Screen Styles */
+.auth-wrapper {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+.auth-card {
+  background: #ffffff;
+  border: 1px solid #d8e2d6;
+  border-radius: 16px;
+  padding: 36px 32px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 10px 30px rgba(38, 61, 46, 0.08);
+}
+.auth-card h2 {
+  color: #263d2e;
+  margin: 0 0 8px;
+  font-size: 24px;
+  text-align: center;
+}
+.auth-card p.auth-subtitle {
+  color: #69766d;
+  font-size: 14px;
+  margin: 0 0 24px;
+  text-align: center;
+}
+.auth-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  background: #f0f4ef;
+  padding: 4px;
+  border-radius: 10px;
+}
+.auth-tab-btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  color: #556b5c;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.auth-tab-btn.active {
+  background: #287448;
+  color: #ffffff;
+}
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.auth-form label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #385141;
+  margin-bottom: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.auth-form input, .auth-form select {
+  padding: 11px 14px;
+  border: 1px solid #cbdacb;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+.auth-form input:focus, .auth-form select:focus {
+  border-color: #287448;
+}
+.auth-form .primary-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px;
+}
+.user-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #eaf6eb;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: #1e5a35;
+  font-size: 13px;
+  font-weight: 600;
+}
+.logout-btn {
+  background: transparent;
+  border: 1px solid #c9d8c6;
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: #8c3228;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 6px;
+}
+.logout-btn:hover {
+  background: #fff0ed;
+}
+.profile-card {
+  max-width: 850px;
+  margin: 0 auto 24px;
+  background: #f4f8f4;
+  border: 1px solid #d4e2d2;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
